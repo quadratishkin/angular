@@ -1,0 +1,5 @@
+export enum Pages {
+  MAIN_PAGE = 'MAIN_PAGE',
+  SECOND_PAGE = 'SECOND_PAGE',
+  THIRD_PAGE = 'THIRD_PAGE',
+}

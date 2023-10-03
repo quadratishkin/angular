@@ -27,18 +27,24 @@
   </div>
 </mat-toolbar>
 
-<div [ngSwitch]="currentPage">
-  <div *ngSwitchCase="Pages.MAIN_PAGE">
-    <ng-container></ng-container>
-  </div>
-  <div *ngSwitchCase="Pages.SECOND_PAGE">
-    <div class="mainBackground">
-      <h1 [class.red]="text !== 'Hello world'">{{ text }}</h1>
-      <h3 *ngIf="text !== 'Hello world'">Текст развернут</h3>
-      <button (click)="changeText()">Изменить текст</button>
-      <div *ngFor="let item of array">{{ item }}</div>
-      <button (click)="removeItem()">Удалить</button>
+<div class="backgroundColor">
+  <div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="Pages.MAIN_PAGE">
+      <div class="container">
+        <h1 [class.red]="text !== 'Hello world'">{{ text }}</h1>
+      </div>
     </div>
+
+    <div *ngSwitchCase="Pages.SECOND_PAGE">
+      <div class="container">
+        <h1 [class.red]="text !== 'Hello world'">{{ text }}</h1>
+        <h3 *ngIf="text !== 'Hello world'">Текст развернут</h3>
+        <button (click)="changeText()">Изменить текст</button>
+        <div *ngFor="let item of array">{{ item }}</div>
+        <button (click)="removeItem()">Удалить</button>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="Pages.THIRD_PAGE">value is 3</div>
   </div>
-  <div *ngSwitchCase="Pages.THIRD_PAGE">value is 3</div>
 </div>

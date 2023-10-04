@@ -10,9 +10,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ContentComponent } from './content/content.component';
+import { FirstPageComponent } from './content/first-page/first-page.component';
+import { SecondPageComponent } from './content/second-page/second-page.component';
+import { ThirdPageComponent } from './content/third-page/third-page.component';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent],
+  declarations: [AppComponent, ToolbarComponent, ContentComponent, FirstPageComponent, SecondPageComponent, ThirdPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

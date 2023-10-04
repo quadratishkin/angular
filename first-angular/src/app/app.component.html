@@ -2,46 +2,15 @@
 <div class="backgroundColor">
   <ng-container [ngSwitch]="currentPage">
     <div *ngSwitchCase="Pages.MAIN_PAGE">
-      <div class="container">
-        <h1 [class.red]="text !== 'Hello world'">{{ text }}</h1>
-      </div>
+      <app-first-page></app-first-page>
     </div>
 
     <div *ngSwitchCase="Pages.SECOND_PAGE">
-      <div class="container">
-        <h1 [class.red]="text !== 'Hello world'">{{ text }}</h1>
-        <h3 *ngIf="text !== 'Hello world'">Текст развернут</h3>
-        <button (click)="changeText()">Изменить текст</button>
-        <div *ngFor="let item of array">{{ item }}</div>
-        <button (click)="removeItem()">Удалить</button>
-      </div>
+      <app-second-page></app-second-page>
     </div>
 
     <div *ngSwitchCase="Pages.THIRD_PAGE">
-      <div class="container">
-        <mat-card class="developerCard">
-          <img mat-card-image src="../assets/Photoes/Andrew.jpg" alt="Andrew" />
-          <mat-card-content>
-            The author of this game, backend developer.
-          </mat-card-content>
-        </mat-card>
-        <mat-card class="developerCard">
-          <img
-            mat-card-image
-            src="../assets/Photoes/Dmitriy.jpg"
-            alt="Dmitriy"
-          />
-          <mat-card-content> Backend developer. </mat-card-content>
-        </mat-card>
-        <mat-card class="developerCard">
-          <img mat-card-image src="../assets/Photoes/Nikita.jpg" alt="Nikita" />
-          <mat-card-content> Frontend developer. </mat-card-content>
-        </mat-card>
-        <mat-card class="developerCard">
-          <img mat-card-image src="../assets/Photoes/sveta.jpg" alt="Sveta" />
-          <mat-card-content> Frontend developer. </mat-card-content>
-        </mat-card>
-      </div>
+      <app-third-page></app-third-page>
     </div>
   </ng-container>
 </div>

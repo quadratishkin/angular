@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Pages } from '../constants';
+import { PageContentService } from '../services/page-content.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,10 +8,7 @@ import { Pages } from '../constants';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-  @Output() pageChanged = new EventEmitter<Pages>();
   Pages = Pages;
 
-  handleChangeContent(current: Pages) {
-    this.pageChanged.emit(current);
-  }
+  constructor(public pageContentService: PageContentService) {}
 }

@@ -1,14 +1,20 @@
 <mat-toolbar class="toolBarBackground">
   <span class="nameOfGame">Battle For Weakness</span>
   <div class="containerTool mx-auto">
-    <button (click)="handleChangeContent(Pages.MAIN_PAGE)" class="btn menuBtn">
+    <button
+      (click)="pageContentService.handleChangeContent(Pages.MAIN_PAGE)"
+      class="btn menuBtn"
+    >
       Main Page
     </button>
-    <button (click)="handleChangeContent(Pages.SECOND_PAGE)" class="menuBtn">
+    <button
+      (click)="pageContentService.handleChangeContent(Pages.SECOND_PAGE)"
+      class="menuBtn"
+    >
       Developers
     </button>
     <button
-      (click)="handleChangeContent(Pages.THIRD_PAGE)"
+      (click)="pageContentService.handleChangeContent(Pages.THIRD_PAGE)"
       class="menuBtn"
       [matMenuTriggerFor]="belowMenu"
     >
@@ -21,7 +27,7 @@
   </div>
   <div class="accountPlace">
     <button
-      (click)="handleChangeContent(Pages.SECOND_PAGE)"
+      (click)="pageContentService.handleChangeContent(Pages.SECOND_PAGE)"
       class="accountName"
     >
       <img

@@ -11,23 +11,24 @@
       (click)="pageContentService.handleChangeContent(Pages.SECOND_PAGE)"
       class="menuBtn"
     >
-      Developers
+      Second
     </button>
     <button
       (click)="pageContentService.handleChangeContent(Pages.THIRD_PAGE)"
       class="menuBtn"
-      [matMenuTriggerFor]="belowMenu"
     >
       Third
     </button>
-    <mat-menu class="menuBtn" #belowMenu="matMenu" yPosition="below">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
+    <button
+      (click)="pageContentService.handleChangeContent(Pages.DEVELOPERS_PAGE)"
+      class="menuBtn"
+    >
+      Developers
+    </button>
   </div>
   <div class="accountPlace">
     <button
-      (click)="pageContentService.handleChangeContent(Pages.SECOND_PAGE)"
+      (click)="pageContentService.handleChangeContent(Pages.THIRD_PAGE)"
       class="accountName"
     >
       <img

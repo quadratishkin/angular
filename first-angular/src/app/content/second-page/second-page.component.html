@@ -1,7 +1,0 @@
-<div class="container">
-  <h1 [class.red]="text !== 'Hello world'">{{ text }}</h1>
-  <h3 *ngIf="text !== 'Hello world'">Текст развернут</h3>
-  <button (click)="changeText()">Изменить текст</button>
-  <div *ngFor="let item of array">{{ item }}</div>
-  <button (click)="removeItem()">Удалить</button>
-</div>

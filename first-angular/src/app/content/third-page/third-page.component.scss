@@ -1,14 +1,68 @@
-.developerCard {
-  width: 225px;
-  height: 330px;
-  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45),
-    25px 0 20px -20px rgba(0, 0, 0, 0.45);
-}
-.container {
-  display: flex;
-  justify-content: space-evenly;
+.background {
   width: 70%;
   margin-right: auto;
   margin-left: auto;
   background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+.rules-header {
+  font-weight: bold;
+  align-items: center;
+  font-size: 32px;
+  font-family: Roboto, sans-serif;
+  line-height: 32px;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+.sub-rules {
+  font-size: 16px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  margin-bottom: 1.5rem;
+}
+
+.rules-header-second {
+  font-weight: bold;
+  align-items: center;
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  line-height: 32px;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  text-indent: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.map-photo {
+  height: 15rem;
+  width: 10rem;
+  &:hover {
+    height: 18rem;
+    width: 12rem;
+    border: 0.3rem solid;
+    border-color: black;
+  }
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
 }

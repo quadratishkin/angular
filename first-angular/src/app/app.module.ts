@@ -12,12 +12,20 @@ import { MatCardModule } from '@angular/material/card';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
 import { FirstPageComponent } from './content/first-page/first-page.component';
-import { SecondPageComponent } from './content/second-page/second-page.component';
+import { GamePageComponent } from './content/game-page/game-page.component';
 import { ThirdPageComponent } from './content/third-page/third-page.component';
 import { DevelopersPageComponent } from './content/developers-page/developers-page.component';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, ContentComponent, FirstPageComponent, SecondPageComponent, ThirdPageComponent, DevelopersPageComponent],
+  declarations: [
+    AppComponent,
+    ToolbarComponent,
+    ContentComponent,
+    FirstPageComponent,
+    GamePageComponent,
+    ThirdPageComponent,
+    DevelopersPageComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,3 +1,11 @@
 <div class="background">
-  <app-data-field></app-data-field>
+  <ng-container [ngSwitch]="gameControlService.currentPhase">
+    <div *ngSwitchCase="GamePhases.PREPARING">
+      <app-preparing> </app-preparing>
+    </div>
+    <div *ngSwitchCase="GamePhases.START_GAME">
+      <app-data-field></app-data-field>
+    </div>
+    <div *ngSwitchCase="GamePhases.FINISH_GAME"></div>
+  </ng-container>
 </div>

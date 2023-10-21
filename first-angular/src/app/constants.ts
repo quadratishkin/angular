@@ -4,3 +4,8 @@ export enum Pages {
   GAME_PAGE = 'GAME_PAGE',
   THIRD_PAGE = 'THIRD_PAGE',
 }
+export enum GamePhases {
+  PREPARING = 'PREPARING',
+  START_GAME = 'START_GAME',
+  FINISH_GAME = 'FINISH_GAME',
+}

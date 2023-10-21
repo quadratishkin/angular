@@ -134,7 +134,7 @@ $borderW: 2px;
 
 .choice {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .fractionImg {
@@ -146,15 +146,21 @@ $borderW: 2px;
   flex-direction: column;
   justify-content: space-around;
   height: 20rem;
-  background-color: white;
+  background-color: lightgray;
   text-align: center;
   font-size: 4rem;
   font-family: "Rosarivo", cursive;
   display: flex;
   flex-direction: column;
   caret-color: transparent;
-
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45),
+    25px 0 20px -20px rgba(0, 0, 0, 0.45);
+  border-radius: 1rem;
   &:hover {
-    background-color: lightgray;
+    box-shadow: 0 0 0 12px #53ea93;
   }
+}
+
+.activeFraction {
+  background-color: white;
 }

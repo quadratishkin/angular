@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+}
+
+.cl-btn-6 {
+  position: relative;
+  width: 70px;
+  cursor: pointer;
+}
+.cl-btn-6-in {
+  width: inherit;
+  text-align: center;
+}
+.cl-btn-6-txt {
+  font-size: 13px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #337ab7;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+  font-family: Verdana;
+}
+.cl-btn-6-in:before,
+.cl-btn-6-in:after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: inherit;
+  background: #337ab7;
+  left: 0;
+  transition: all 0.3s ease-in;
+}
+.cl-btn-6-in:before {
+  top: calc(50% - 4px);
+  transform: rotate(45deg);
+}
+.cl-btn-6-in:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+.cl-btn-6:hover .cl-btn-6-txt {
+  opacity: 1;
+}
+.cl-btn-6:hover .cl-btn-6-in:before,
+.cl-btn-6:hover .cl-btn-6-in:after {
+  transform: rotate(0);
+}

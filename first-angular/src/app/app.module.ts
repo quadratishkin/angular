@@ -17,6 +17,7 @@ import { ThirdPageComponent } from './content/third-page/third-page.component';
 import { DevelopersPageComponent } from './content/developers-page/developers-page.component';
 import { DataFieldComponent } from './content/game-page/data-field/data-field.component';
 import { PreparingComponent } from './content/game-page/preparing/preparing.component';
+import { GameOverComponent } from './content/game-page/game-over/game-over.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PreparingComponent } from './content/game-page/preparing/preparing.comp
     DevelopersPageComponent,
     DataFieldComponent,
     PreparingComponent,
+    GameOverComponent,
   ],
   imports: [
     BrowserModule,

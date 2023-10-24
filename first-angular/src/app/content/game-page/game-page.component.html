@@ -6,6 +6,8 @@
     <div *ngSwitchCase="GamePhases.START_GAME">
       <app-data-field></app-data-field>
     </div>
-    <div *ngSwitchCase="GamePhases.FINISH_GAME"></div>
+    <div *ngSwitchCase="GamePhases.FINISH_GAME">
+      <app-game-over></app-game-over>
+    </div>
   </ng-container>
 </div>

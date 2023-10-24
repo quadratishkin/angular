@@ -1,6 +1,6 @@
 <div class="container">
   <div class="interface">
-    <div class="fraction-name">Болото</div>
+    <div class="fraction-name">{{ gameControlService.selectedFraction }}</div>
     <div class="resources">
       <img
         class="heart"
@@ -16,5 +16,12 @@
       </div>
       <div class="count-of-smth">10</div>
     </div>
+  </div>
+  <div class="container">
+    <button
+      (click)="gameControlService.handleChangeContent(GamePhases.FINISH_GAME)"
+    >
+      Типо конец игры
+    </button>
   </div>
 </div>

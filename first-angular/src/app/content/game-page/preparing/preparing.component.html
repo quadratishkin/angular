@@ -50,8 +50,10 @@
 
 <div class="choice">
   <div
-    [ngClass]="{ activeFraction: selectedFraction === Fraction.SWAMP }"
-    (click)="handleFractionChoice(Fraction.SWAMP)"
+    [ngClass]="{
+      activeFraction: gameControlService.selectedFraction === Fraction.SWAMP
+    }"
+    (click)="gameControlService.handleFractionChoice(Fraction.SWAMP)"
     class="fractionCard"
   >
     Swamp
@@ -63,8 +65,10 @@
   </div>
 
   <div
-    [ngClass]="{ activeFraction: selectedFraction === Fraction.MOUNTAIN }"
-    (click)="handleFractionChoice(Fraction.MOUNTAIN)"
+    [ngClass]="{
+      activeFraction: gameControlService.selectedFraction === Fraction.MOUNTAIN
+    }"
+    (click)="gameControlService.handleFractionChoice(Fraction.MOUNTAIN)"
     class="fractionCard"
   >
     Mountain

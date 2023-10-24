@@ -1,4 +1,4 @@
 export enum Fractions {
-  SWAMP,
-  MOUNTAIN,
+  SWAMP = 'Swamp',
+  MOUNTAIN = 'Mountain',
 }

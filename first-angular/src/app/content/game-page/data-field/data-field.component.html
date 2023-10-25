@@ -17,11 +17,17 @@
       <div class="count-of-smth">10</div>
     </div>
   </div>
-  <div class="container">
-    <button
+  <div class="giveUpField">
+    <a
       (click)="gameControlService.handleChangeContent(GamePhases.FINISH_GAME)"
+      class="btn-slide"
     >
-      Типо конец игры
-    </button>
+      <span class="circle">
+        <i class="fa-solid fa-film"></i>
+      </span>
+
+      <span class="title">Give up</span>
+      <span class="title title-hover">Оффнуть с позором</span>
+    </a>
   </div>
 </div>

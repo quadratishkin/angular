@@ -1,2 +1,4 @@
-<app-toolbar></app-toolbar>
+<div *ngIf="gameControlService.gameState === 0">
+  <app-toolbar></app-toolbar>
+</div>
 <app-content></app-content>

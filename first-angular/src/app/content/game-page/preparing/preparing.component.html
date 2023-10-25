@@ -1,5 +1,6 @@
 <div class="buttons">
   <button
+    (click)="gameControlService.handleGameStarted()"
     (click)="gameControlService.handleChangeContent(GamePhases.START_GAME)"
     class="blob-btn"
   >

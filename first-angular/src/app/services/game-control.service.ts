@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GamePhases } from '../constants';
+import { GamePhases, GameState } from '../constants';
 import { Fractions } from '../content/game-page/preparing/constants';
 
 @Injectable({
@@ -10,11 +10,21 @@ export class GameControlService {
 
   selectedFraction: Fractions | null = null;
 
+  gameState: GameState = 0;
+
   handleFractionChoice(fractionName: Fractions) {
     this.selectedFraction = fractionName;
   }
 
   handleChangeContent(current: GamePhases) {
     this.currentPhase = current;
+  }
+
+  handleGameStarted() {
+    this.gameState = 1;
+  }
+
+  handleGameEnded() {
+    this.gameState = 0;
   }
 }

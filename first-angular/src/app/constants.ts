@@ -9,3 +9,8 @@ export enum GamePhases {
   START_GAME = 'START_GAME',
   FINISH_GAME = 'FINISH_GAME',
 }
+
+export enum GameState {
+  NOPROCESS,
+  PROCESS,
+}

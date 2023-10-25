@@ -2,6 +2,7 @@
   <div class="cl-btn-6">
     <div class="cl-btn-6-in">
       <div
+        (click)="gameControlService.handleGameEnded()"
         (click)="gameControlService.handleChangeContent(GamePhases.PREPARING)"
         class="cl-btn-6-txt"
       >

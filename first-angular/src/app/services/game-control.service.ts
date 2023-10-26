@@ -14,6 +14,7 @@ export class GameControlService {
   gameState: GameState = 0;
 
   turn: Turn = 0;
+  turnTitle = 'End the Turn';
 
   handleFractionChoice(fractionName: Fractions) {
     this.selectedFraction = fractionName;
@@ -33,8 +34,10 @@ export class GameControlService {
 
   handleTurn() {
     if (this.turn === 0) {
+      this.turnTitle = "Opponent's Turn";
       this.turn = 1;
     } else {
+      this.turnTitle = 'End the Turn';
       this.turn = 0;
     }
   }

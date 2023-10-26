@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rosarivo:ital@1&display=swap");
 
+.background {
+  background-color: bisque;
+  width: 100%;
+  height: calc(100% - 64px);
+  padding-top: 64px;
+}
+
 *,
 *:before,
 *:after {

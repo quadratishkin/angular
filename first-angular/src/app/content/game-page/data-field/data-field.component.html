@@ -1,90 +1,109 @@
-<div class="container">
-  <div class="interface">
-    <div class="fraction-name">{{ gameControlService.selectedFraction }}</div>
-    <div class="resources">
-      <img
-        class="heart"
-        src="../../../../assets/Photoes/hearth.png"
-        alt="hearths"
-      />
-      <div class="count-of-smth">3</div>
-      <div class="coin">
-        <div class="coin__front"></div>
-        <div class="coin__edge"></div>
-        <div class="coin__back"></div>
-        <div class="coin__shadow"></div>
+<div class="background">
+  <div class="container">
+    <div class="interface">
+      <div class="fraction-name">{{ gameControlService.selectedFraction }}</div>
+      <div class="resources">
+        <img
+          class="heart"
+          src="../../../../assets/Photoes/hearth.png"
+          alt="hearths"
+        />
+        <div class="countOfSmth">3</div>
+        <div class="coin">
+          <div class="coin__front"></div>
+          <div class="coin__edge"></div>
+          <div class="coin__back"></div>
+          <div class="coin__shadow"></div>
+        </div>
+        <div class="countOfSmth">10</div>
       </div>
-      <div class="count-of-smth">10</div>
+    </div>
+    <div class="giveUpField">
+      <a
+        (click)="gameControlService.handleChangeContent(GamePhases.FINISH_GAME)"
+        class="btn-slide"
+      >
+        <span class="circle">
+          <i class="fa-solid fa-film"></i>
+        </span>
+
+        <span class="title">Give up</span>
+        <span class="title title-hover">Оффнуть с позором</span>
+      </a>
     </div>
   </div>
-  <div class="giveUpField">
-    <a
-      (click)="gameControlService.handleChangeContent(GamePhases.FINISH_GAME)"
-      class="btn-slide"
-    >
-      <span class="circle">
-        <i class="fa-solid fa-film"></i>
-      </span>
 
-      <span class="title">Give up</span>
-      <span class="title title-hover">Оффнуть с позором</span>
-    </a>
+  <div class="endTurnButtonField">
+    <button (click)="gameControlService.handleTurn()" class="endTurnButton">
+      {{ gameControlService.turnTitle }}
+    </button>
   </div>
-</div>
+  <div class="wrapper">
+    <div class="opponentsDecks decks">
+      <div class="deck odeck1 opponentsDeck"></div>
+      <div class="deck odeck2 opponentsDeck"></div>
+      <div class="deck odeck3 opponentsDeck"></div>
+      <div class="deck odeck4 opponentsDeck"></div>
+      <div class="deck odeck5 opponentsDeck"></div>
+    </div>
+    <div class="field">
+      <div class="cardField cf1 row1 opponentsRow"></div>
+      <div class="cardField cf2 row1 opponentsRow"></div>
+      <div class="cardField cf3 row1 opponentsRow"></div>
+      <div class="cardField cf4 row1 opponentsRow"></div>
+      <div class="cardField cf5 row1 opponentsRow"></div>
+      <div class="cardField cf6 row1 opponentsRow"></div>
+      <div class="cardField cf7 row1 opponentsRow"></div>
+      <div class="cardField cf8 row1 opponentsRow"></div>
+      <div class="cardField cf1 row2 opponentsRow"></div>
+      <div class="cardField cf2 row2 opponentsRow"></div>
+      <div class="cardField cf3 row2 opponentsRow"></div>
+      <div class="cardField cf4 row2 opponentsRow"></div>
+      <div class="cardField cf5 row2 opponentsRow"></div>
+      <div class="cardField cf6 row2 opponentsRow"></div>
+      <div class="cardField cf7 row2 opponentsRow"></div>
+      <div class="cardField cf8 row2 opponentsRow"></div>
+      <div class="cardField cf1 row3 commonRow"></div>
+      <div class="cardField cf2 row3 commonRow"></div>
+      <div class="cardField cf3 row3 commonRow"></div>
+      <div class="cardField cf4 row3 commonRow"></div>
+      <div class="cardField cf5 row3 commonRow"></div>
+      <div class="cardField cf6 row3 commonRow"></div>
+      <div class="cardField cf7 row3 commonRow"></div>
+      <div class="cardField cf8 row3 commonRow"></div>
+      <div class="cardField cf1 row4 commonRow"></div>
+      <div class="cardField cf2 row4 commonRow"></div>
+      <div class="cardField cf3 row4 commonRow"></div>
+      <div class="cardField cf4 row4 commonRow"></div>
+      <div class="cardField cf5 row4 commonRow"></div>
+      <div class="cardField cf6 row4 commonRow"></div>
+      <div class="cardField cf7 row4 commonRow"></div>
+      <div class="cardField cf8 row4 commonRow"></div>
+      <div class="cardField cf1 row5 myRow"></div>
+      <div class="cardField cf2 row5 myRow"></div>
+      <div class="cardField cf3 row5 myRow"></div>
+      <div class="cardField cf4 row5 myRow"></div>
+      <div class="cardField cf5 row5 myRow"></div>
+      <div class="cardField cf6 row5 myRow"></div>
+      <div class="cardField cf7 row5 myRow"></div>
+      <div class="cardField cf8 row5 myRow"></div>
+      <div class="cardField cf1 row6 myRow"></div>
+      <div class="cardField cf2 row6 myRow"></div>
+      <div class="cardField cf3 row6 myRow"></div>
+      <div class="cardField cf4 row6 myRow"></div>
+      <div class="cardField cf5 row6 myRow"></div>
+      <div class="cardField cf6 row6 myRow"></div>
+      <div class="cardField cf7 row6 myRow"></div>
+      <div class="cardField cf8 row6 myRow"></div>
+    </div>
+    <div class="myDecks decks">
+      <div class="deck mdeck1 myDeck"></div>
+      <div class="deck mdeck2 myDeck"></div>
+      <div class="deck mdeck3 myDeck"></div>
+      <div class="deck mdeck4 myDeck"></div>
+      <div class="deck mdeck5 myDeck"></div>
+    </div>
+  </div>
 
-<div class="endTurnButtonField">
-  <button (click)="gameControlService.handleTurn()" class="endTurnButton">
-    End the Turn
-  </button>
-</div>
-
-<div class="wrapper">
-  <div class="cardField cf1 row1 opponentsRow"></div>
-  <div class="cardField cf2 row1 opponentsRow"></div>
-  <div class="cardField cf3 row1 opponentsRow"></div>
-  <div class="cardField cf4 row1 opponentsRow"></div>
-  <div class="cardField cf5 row1 opponentsRow"></div>
-  <div class="cardField cf6 row1 opponentsRow"></div>
-  <div class="cardField cf7 row1 opponentsRow"></div>
-  <div class="cardField cf8 row1 opponentsRow"></div>
-  <div class="cardField cf1 row2 opponentsRow"></div>
-  <div class="cardField cf2 row2 opponentsRow"></div>
-  <div class="cardField cf3 row2 opponentsRow"></div>
-  <div class="cardField cf4 row2 opponentsRow"></div>
-  <div class="cardField cf5 row2 opponentsRow"></div>
-  <div class="cardField cf6 row2 opponentsRow"></div>
-  <div class="cardField cf7 row2 opponentsRow"></div>
-  <div class="cardField cf8 row2 opponentsRow"></div>
-  <div class="cardField cf1 row3 commonRow"></div>
-  <div class="cardField cf2 row3 commonRow"></div>
-  <div class="cardField cf3 row3 commonRow"></div>
-  <div class="cardField cf4 row3 commonRow"></div>
-  <div class="cardField cf5 row3 commonRow"></div>
-  <div class="cardField cf6 row3 commonRow"></div>
-  <div class="cardField cf7 row3 commonRow"></div>
-  <div class="cardField cf8 row3 commonRow"></div>
-  <div class="cardField cf1 row4 commonRow"></div>
-  <div class="cardField cf2 row4 commonRow"></div>
-  <div class="cardField cf3 row4 commonRow"></div>
-  <div class="cardField cf4 row4 commonRow"></div>
-  <div class="cardField cf5 row4 commonRow"></div>
-  <div class="cardField cf6 row4 commonRow"></div>
-  <div class="cardField cf7 row4 commonRow"></div>
-  <div class="cardField cf8 row4 commonRow"></div>
-  <div class="cardField cf1 row5 myRow"></div>
-  <div class="cardField cf2 row5 myRow"></div>
-  <div class="cardField cf3 row5 myRow"></div>
-  <div class="cardField cf4 row5 myRow"></div>
-  <div class="cardField cf5 row5 myRow"></div>
-  <div class="cardField cf6 row5 myRow"></div>
-  <div class="cardField cf7 row5 myRow"></div>
-  <div class="cardField cf8 row5 myRow"></div>
-  <div class="cardField cf1 row6 myRow"></div>
-  <div class="cardField cf2 row6 myRow"></div>
-  <div class="cardField cf3 row6 myRow"></div>
-  <div class="cardField cf4 row6 myRow"></div>
-  <div class="cardField cf5 row6 myRow"></div>
-  <div class="cardField cf6 row6 myRow"></div>
-  <div class="cardField cf7 row6 myRow"></div>
-  <div class="cardField cf8 row6 myRow"></div>
+  <div class="hand"></div>
 </div>

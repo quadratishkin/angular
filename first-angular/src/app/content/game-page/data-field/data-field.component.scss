@@ -243,10 +243,27 @@ $turn-time: 6s;
   }
 }
 
+.map {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100% - 6rem - 80px);
+}
+
 .wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+}
+
+.hand {
+  position: relative;
+  display: inline-flex;
+  text-align: justify;
+  align-self: center;
+  max-width: 60rem;
+  height: 3rem;
+  border: 1px solid black;
 }
 
 .decks {
@@ -254,13 +271,14 @@ $turn-time: 6s;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  width: 30vh;
+  width: 25%;
   height: 100%;
   margin: 2rem;
 }
 
 .opponentsDecks {
-  align-self: flex-start;
+  align-self: center;
+  flex-wrap: wrap-reverse;
 }
 
 .opponentsDeck {
@@ -268,7 +286,7 @@ $turn-time: 6s;
 }
 
 .myDecks {
-  align-self: flex-end;
+  align-self: center;
 }
 
 .myDeck {
@@ -281,28 +299,48 @@ $turn-time: 6s;
   width: 40%;
 }
 
+.myCards {
+  overflow-y: hidden;
+  flex-grow: 1;
+  z-index: 10;
+  width: 6rem;
+  max-width: 15rem;
+  &:hover {
+    border: none;
+    overflow-y: unset;
+    transform: translate3d(0px, -200px, 0px);
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.opponentsCards {
+  caret-color: transparent;
+  z-index: 10;
+  width: 6rem;
+  max-width: 15rem;
+  border: 1px solid black;
+}
+
 .field {
-  display: grid;
-  height: calc(100vh - 80px - 6rem);
-  width: 48%;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  margin-top: 3rem;
-  padding-bottom: 3rem;
-  gap: 0.3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.row {
+  display: flex;
+  gap: 2.5px;
 }
 
 .cardField {
-  border: 1px solid black;
-}
-.opponentsRow {
-  background-color: rgb(248, 166, 180);
-}
-.commonRow {
-  background-color: white;
-}
-.myRow {
-  background-color: rgb(159, 159, 247);
+  caret-color: transparent;
+  margin-right: 1.25px;
+  margin-left: 1.25px;
+  border-radius: 5px;
+  width: 4rem;
+  height: 4rem;
 }
 
 .endTurnButtonField {
@@ -320,6 +358,10 @@ $turn-time: 6s;
   &:focus {
     animation: effect 0.4s 1;
   }
+}
+
+.image {
+  width: 100%;
 }
 
 @keyframes effect {

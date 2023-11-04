@@ -38,72 +38,42 @@
       {{ gameControlService.turnTitle }}
     </button>
   </div>
-  <div class="wrapper">
-    <div class="opponentsDecks decks">
-      <div class="deck odeck1 opponentsDeck"></div>
-      <div class="deck odeck2 opponentsDeck"></div>
-      <div class="deck odeck3 opponentsDeck"></div>
-      <div class="deck odeck4 opponentsDeck"></div>
-      <div class="deck odeck5 opponentsDeck"></div>
+  <div class="map">
+    <div class="hand">
+      <div class="opponentsCards" *ngFor="let item of opponentsHand"></div>
     </div>
-    <div class="field">
-      <div class="cardField cf1 row1 opponentsRow"></div>
-      <div class="cardField cf2 row1 opponentsRow"></div>
-      <div class="cardField cf3 row1 opponentsRow"></div>
-      <div class="cardField cf4 row1 opponentsRow"></div>
-      <div class="cardField cf5 row1 opponentsRow"></div>
-      <div class="cardField cf6 row1 opponentsRow"></div>
-      <div class="cardField cf7 row1 opponentsRow"></div>
-      <div class="cardField cf8 row1 opponentsRow"></div>
-      <div class="cardField cf1 row2 opponentsRow"></div>
-      <div class="cardField cf2 row2 opponentsRow"></div>
-      <div class="cardField cf3 row2 opponentsRow"></div>
-      <div class="cardField cf4 row2 opponentsRow"></div>
-      <div class="cardField cf5 row2 opponentsRow"></div>
-      <div class="cardField cf6 row2 opponentsRow"></div>
-      <div class="cardField cf7 row2 opponentsRow"></div>
-      <div class="cardField cf8 row2 opponentsRow"></div>
-      <div class="cardField cf1 row3 commonRow"></div>
-      <div class="cardField cf2 row3 commonRow"></div>
-      <div class="cardField cf3 row3 commonRow"></div>
-      <div class="cardField cf4 row3 commonRow"></div>
-      <div class="cardField cf5 row3 commonRow"></div>
-      <div class="cardField cf6 row3 commonRow"></div>
-      <div class="cardField cf7 row3 commonRow"></div>
-      <div class="cardField cf8 row3 commonRow"></div>
-      <div class="cardField cf1 row4 commonRow"></div>
-      <div class="cardField cf2 row4 commonRow"></div>
-      <div class="cardField cf3 row4 commonRow"></div>
-      <div class="cardField cf4 row4 commonRow"></div>
-      <div class="cardField cf5 row4 commonRow"></div>
-      <div class="cardField cf6 row4 commonRow"></div>
-      <div class="cardField cf7 row4 commonRow"></div>
-      <div class="cardField cf8 row4 commonRow"></div>
-      <div class="cardField cf1 row5 myRow"></div>
-      <div class="cardField cf2 row5 myRow"></div>
-      <div class="cardField cf3 row5 myRow"></div>
-      <div class="cardField cf4 row5 myRow"></div>
-      <div class="cardField cf5 row5 myRow"></div>
-      <div class="cardField cf6 row5 myRow"></div>
-      <div class="cardField cf7 row5 myRow"></div>
-      <div class="cardField cf8 row5 myRow"></div>
-      <div class="cardField cf1 row6 myRow"></div>
-      <div class="cardField cf2 row6 myRow"></div>
-      <div class="cardField cf3 row6 myRow"></div>
-      <div class="cardField cf4 row6 myRow"></div>
-      <div class="cardField cf5 row6 myRow"></div>
-      <div class="cardField cf6 row6 myRow"></div>
-      <div class="cardField cf7 row6 myRow"></div>
-      <div class="cardField cf8 row6 myRow"></div>
+    <div class="wrapper">
+      <div class="opponentsDecks decks">
+        <div class="deck odeck1 opponentsDeck"></div>
+        <div class="deck odeck2 opponentsDeck"></div>
+        <div class="deck odeck3 opponentsDeck"></div>
+        <div class="deck odeck4 opponentsDeck"></div>
+        <div class="deck odeck5 opponentsDeck"></div>
+      </div>
+      <div class="field">
+        <div class="row" *ngFor="let row of field; let rowIndex = index">
+          <div class="cardField" *ngFor="let cell of row">
+            <img
+              class="image"
+              [src]="getCardImageUrl(rowIndex, cell)"
+              alt=""
+              cdkDrag
+            />
+          </div>
+        </div>
+      </div>
+      <div class="myDecks decks">
+        <div class="deck mdeck1 myDeck"></div>
+        <div class="deck mdeck2 myDeck"></div>
+        <div class="deck mdeck3 myDeck"></div>
+        <div class="deck mdeck4 myDeck"></div>
+        <div class="deck mdeck5 myDeck"></div>
+      </div>
     </div>
-    <div class="myDecks decks">
-      <div class="deck mdeck1 myDeck"></div>
-      <div class="deck mdeck2 myDeck"></div>
-      <div class="deck mdeck3 myDeck"></div>
-      <div class="deck mdeck4 myDeck"></div>
-      <div class="deck mdeck5 myDeck"></div>
+    <div class="hand">
+      <div class="myCards" *ngFor="let item of myHand" cdkDrag>
+        <img class="image" [src]="idHandPictures[item]" alt="" />
+      </div>
     </div>
   </div>
-
-  <div class="hand"></div>
 </div>

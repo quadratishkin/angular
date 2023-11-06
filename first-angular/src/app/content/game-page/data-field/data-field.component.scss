@@ -244,7 +244,7 @@ $turn-time: 6s;
 }
 
 .map {
-  margin-top: 1rem;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -324,6 +324,8 @@ $turn-time: 6s;
 
 .field {
   display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
   width: 50%;
@@ -331,16 +333,42 @@ $turn-time: 6s;
 
 .row {
   display: flex;
-  gap: 2.5px;
+  gap: 5px;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
 }
 
 .cardField {
   caret-color: transparent;
-  margin-right: 1.25px;
-  margin-left: 1.25px;
   border-radius: 5px;
-  width: 4rem;
-  height: 4rem;
+  width: 3.8rem;
+  height: 3.8rem;
+}
+
+.yellowCircle {
+  caret-color: transparent;
+  background-color: yellow;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.blueSquare {
+  caret-color: transparent;
+  background-color: rgb(129, 129, 248);
+  border: 1px solid black;
+}
+
+.redSquare {
+  caret-color: transparent;
+  background-color: rgb(250, 173, 145);
+  border: 1px solid black;
+}
+
+.whiteSquare {
+  caret-color: transparent;
+  background-color: white;
+  border: 1px solid black;
 }
 
 .endTurnButtonField {

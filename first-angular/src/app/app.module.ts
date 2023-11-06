@@ -19,6 +19,7 @@ import { DevelopersPageComponent } from './content/developers-page/developers-pa
 import { DataFieldComponent } from './content/game-page/data-field/data-field.component';
 import { PreparingComponent } from './content/game-page/preparing/preparing.component';
 import { GameOverComponent } from './content/game-page/game-over/game-over.component';
+import { FieldCardRendererComponent } from './content/game-page/data-field/field-card-renderer/field-card-renderer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { GameOverComponent } from './content/game-page/game-over/game-over.compo
     DataFieldComponent,
     PreparingComponent,
     GameOverComponent,
+    FieldCardRendererComponent,
   ],
   imports: [
     BrowserModule,

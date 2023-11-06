@@ -3,26 +3,31 @@ export enum Turn {
   OPPONENT,
 }
 
-export const idHandPictures: abc = {
-  0: '../../../../assets/Photoes/hearth.png',
+export const idHandPictures: DynamicObject<string> = {
+  1: '../../../../assets/Photoes/hearth.png',
+  2: '../../../../assets/Photoes/FieldPictures/yellowCircle.png',
 };
 
-export const idMoneyCollectorPictures: abc = {
+export const idMoneyCollectorPictures: DynamicObject<string> = {
   0: '../../../../assets/Photoes/FieldPictures/yellowCircle.png',
+  1: '../../../../assets/Photoes/hearth.png',
 };
 
-export const idMyFieldPictures: abc = {
+export const idMyFieldPictures: DynamicObject<string> = {
   0: '../../../../assets/Photoes/FieldPictures/blueSquare.jpg',
+  1: '../../../../assets/Photoes/hearth.png',
 };
 
-export const idCommonFieldPictures: abc = {
+export const idCommonFieldPictures: DynamicObject<string> = {
   0: '../../../../assets/Photoes/FieldPictures/whiteSquare.jpg',
+  1: '../../../../assets/Photoes/hearth.png',
 };
 
-export const idOppsFieldPictures: abc = {
+export const idOppsFieldPictures: DynamicObject<string> = {
   0: '../../../../assets/Photoes/FieldPictures/redSquare.jpg',
+  1: '../../../../assets/Photoes/hearth.png',
 };
 
-interface abc {
-  [key: number]: string;
+export interface DynamicObject<T> {
+  [key: string]: T;
 }

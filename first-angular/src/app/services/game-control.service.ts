@@ -7,7 +7,7 @@ import { Turn } from '../content/game-page/data-field/constants';
   providedIn: 'root',
 })
 export class GameControlService {
-  currentPhase: GamePhases = GamePhases.PREPARING;
+  currentPhase: GamePhases = GamePhases.START_GAME;
 
   selectedFraction: Fractions | null = null;
 

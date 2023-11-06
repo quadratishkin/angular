@@ -52,13 +52,24 @@
       </div>
       <div class="field">
         <div class="row" *ngFor="let row of field; let rowIndex = index">
-          <div class="cardField" *ngFor="let cell of row">
-            <img
-              class="image"
-              [src]="getCardImageUrl(rowIndex, cell)"
-              alt=""
-              cdkDrag
-            />
+          <div
+            class="dropContainer"
+            [ngClass]="getRowColor(rowIndex)"
+            *ngFor="let cell of row; let cellIndex = index"
+          >
+            <div
+              class="cardField"
+              cdkDropList
+              (mousedown)="pickCard(rowIndex, cellIndex, cell)"
+              (mouseup)="dropCard(rowIndex, cellIndex)"
+            >
+              <img
+                cdkDrag
+                class="image"
+                [src]="getCardImageUrl(rowIndex, cell)"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -70,8 +81,14 @@
         <div class="deck mdeck5 myDeck"></div>
       </div>
     </div>
-    <div class="hand">
-      <div class="myCards" *ngFor="let item of myHand" cdkDrag>
+    <div class="hand" cdkDropList [cdkDropListData]="myHand">
+      <!-- [cdkDropListEnterPredicate]="noReturnPredicate" -->
+      <div
+        class="myCards"
+        *ngFor="let item of myHand"
+        cdkDrag
+        (mousedown)="pickCardByHand(item)"
+      >
         <img class="image" [src]="idHandPictures[item]" alt="" />
       </div>
     </div>

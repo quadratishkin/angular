@@ -86,7 +86,7 @@ export class DataFieldComponent {
 
   dropCard(row: number, cell: number) {
     console.log('I was here drop ' + row + ' ' + cell + ' ' + this.currentCard);
-    this.field[row][cell] = this.currentCard;
+    this.field = this.field1;
   }
 
   noReturnPredicate() {

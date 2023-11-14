@@ -39,9 +39,6 @@ export class GameControlService {
   handleGameStarted() {
     if (this.secondPlayerIsReady == true) {
       this.gameState = 1;
-    } else {
-      console.log('I was here');
-      // loadCircle.style.display = 'none';
     }
   }
 

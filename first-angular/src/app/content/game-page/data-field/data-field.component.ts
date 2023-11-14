@@ -76,16 +76,13 @@ export class DataFieldComponent {
   }
 
   pickCard(row: number, cell: number, card: number) {
-    console.log('I was here pick ' + row + ' ' + cell + ' ' + this.currentCard);
     this.currentCard = card;
   }
   pickCardByHand(card: number) {
-    console.log('I was here hand ' + this.currentCard);
     this.currentCard = card;
   }
 
   dropCard(row: number, cell: number) {
-    console.log('I was here drop ' + row + ' ' + cell + ' ' + this.currentCard);
     this.field = this.field1;
   }
 

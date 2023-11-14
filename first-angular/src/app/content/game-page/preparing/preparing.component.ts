@@ -13,5 +13,24 @@ export class PreparingComponent {
 
   Fraction = Fractions;
 
+  opponentsState: string = 'Opponent is not ready';
+
   constructor(public gameControlService: GameControlService) {}
+
+  changeColor() {
+    const colorForButton = document.getElementById('exampleButton');
+
+    if (colorForButton != null) {
+      this.opponentsState = 'Now opponent is ready';
+      colorForButton.style.backgroundColor = 'green';
+    }
+  }
+
+  handleLoadCircle() {
+    const loadCircle = document.getElementById('loadCircle');
+
+    if (loadCircle != null) {
+      loadCircle.style.display = 'block';
+    }
+  }
 }

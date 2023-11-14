@@ -5,7 +5,7 @@ import { Pages } from '../constants';
   providedIn: 'root',
 })
 export class PageContentService {
-  currentPage: Pages = Pages.GAME_PAGE;
+  currentPage: Pages = Pages.MAIN_PAGE;
 
   handleChangeContent(current: Pages) {
     this.currentPage = current;

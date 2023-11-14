@@ -312,6 +312,13 @@ $turn-time: 6s;
     width: 100%;
     margin: 0;
   }
+  &:active{
+    border: none;
+    overflow-y: unset;
+    transform: translate3d(0px, -200px, 0px);
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .opponentsCards {

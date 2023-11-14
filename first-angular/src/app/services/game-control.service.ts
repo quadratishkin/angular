@@ -7,11 +7,13 @@ import { Turn } from '../content/game-page/data-field/constants';
   providedIn: 'root',
 })
 export class GameControlService {
-  currentPhase: GamePhases = GamePhases.START_GAME;
+  currentPhase: GamePhases = GamePhases.PREPARING;
 
   selectedFraction: Fractions | null = null;
 
   gameState: GameState = 0;
+
+  secondPlayerIsReady: boolean = false;
 
   turn: Turn = 0;
   turnTitle = 'End the Turn';
@@ -20,12 +22,27 @@ export class GameControlService {
     this.selectedFraction = fractionName;
   }
 
+  changeSecondPlayerState() {
+    this.secondPlayerIsReady = true;
+  }
+
   handleChangeContent(current: GamePhases) {
-    this.currentPhase = current;
+    if (this.secondPlayerIsReady == true) {
+      this.currentPhase = current;
+      if (current == 'PREPARING') this.secondPlayerIsReady = false;
+    } else {
+      // loadCircle.style = 'display: block';
+      // this.currentPhase = current;
+    }
   }
 
   handleGameStarted() {
-    this.gameState = 1;
+    if (this.secondPlayerIsReady == true) {
+      this.gameState = 1;
+    } else {
+      console.log('I was here');
+      // loadCircle.style.display = 'none';
+    }
   }
 
   handleGameEnded() {

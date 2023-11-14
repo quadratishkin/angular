@@ -13,24 +13,15 @@ export class PreparingComponent {
 
   Fraction = Fractions;
 
-  opponentsState: string = 'Opponent is not ready';
-
   constructor(public gameControlService: GameControlService) {}
 
-  changeColor() {
-    const colorForButton = document.getElementById('exampleButton');
+  // handleLoadCircle() {
+  //   const loadCircle = document.getElementById('loadCircle');
 
-    if (colorForButton != null) {
-      this.opponentsState = 'Now opponent is ready';
-      colorForButton.style.backgroundColor = 'green';
-    }
-  }
+  //   this.playButton = 'Search for an opponent';
 
-  handleLoadCircle() {
-    const loadCircle = document.getElementById('loadCircle');
-
-    if (loadCircle != null) {
-      loadCircle.style.display = 'block';
-    }
-  }
+  //   if (loadCircle != null) {
+  //     loadCircle.style.display = 'block';
+  //   }
+  // }
 }

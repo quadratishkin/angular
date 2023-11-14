@@ -41,7 +41,7 @@ $borderW: 2px;
   text-align: center;
   text-transform: uppercase;
   color: $cyan;
-  width: 13rem;
+  width: 20rem;
   font-size: 16px;
   font-weight: bold;
   background-color: transparent;
@@ -188,7 +188,7 @@ $borderW: 2px;
 }
 
 .loadCircle {
-  display: none;
+  visibility: hidden;
   position: absolute;
   animation: spinning 3s infinite linear;
 }

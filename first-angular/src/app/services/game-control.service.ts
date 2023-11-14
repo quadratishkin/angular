@@ -15,6 +15,41 @@ export class GameControlService {
 
   secondPlayerIsReady: boolean = false;
 
+  playButton: string = 'Play';
+  opponentsState: string = 'Opponent is not ready';
+
+  changeColor() {
+    const colorForButton = document.getElementById('exampleButton');
+
+    if (colorForButton != null) {
+      this.opponentsState = 'Now opponent is ready';
+      colorForButton.style.backgroundColor = 'green';
+      this.playButton = 'Play';
+      const loadCircle = document.getElementById('loadCircle');
+      if (loadCircle != null) {
+        loadCircle.style.visibility = 'hidden';
+      }
+    }
+  }
+
+  searchGame() {
+    const loadCircle = document.getElementById('loadCircle');
+
+    if (this.playButton == 'Play') {
+      this.playButton = 'Search for an opponent';
+
+      if (loadCircle != null) {
+        loadCircle.style.visibility = 'visible';
+      }
+    } else {
+      this.playButton = 'Play';
+
+      if (loadCircle != null) {
+        loadCircle.style.visibility = 'hidden';
+      }
+    }
+  }
+
   turn: Turn = 0;
   turnTitle = 'End the Turn';
 
@@ -43,6 +78,8 @@ export class GameControlService {
   }
 
   handleGameEnded() {
+    this.opponentsState = 'Opponent is not ready';
+    this.playButton = 'Play';
     this.gameState = 0;
   }
 

@@ -7,22 +7,23 @@
         alt="arrow"
       />
     </div>
+
     <button
-      (click)="changeColor()"
+      (click)="gameControlService.changeColor()"
       (click)="gameControlService.changeSecondPlayerState()"
       class="exampleButton"
       id="exampleButton"
     >
-      {{ opponentsState }}
+      {{ gameControlService.opponentsState }}
     </button>
 
     <button
-      (click)="handleLoadCircle()"
+      (click)="gameControlService.searchGame()"
       (click)="gameControlService.handleGameStarted()"
       (click)="gameControlService.handleChangeContent(GamePhases.START_GAME)"
       class="blob-btn"
     >
-      Play
+      {{ gameControlService.playButton }}
       <span class="blob-btn__inner">
         <span class="blob-btn__blobs">
           <span class="blob-btn__blob"></span>

@@ -14,14 +14,4 @@ export class PreparingComponent {
   Fraction = Fractions;
 
   constructor(public gameControlService: GameControlService) {}
-
-  // handleLoadCircle() {
-  //   const loadCircle = document.getElementById('loadCircle');
-
-  //   this.playButton = 'Search for an opponent';
-
-  //   if (loadCircle != null) {
-  //     loadCircle.style.display = 'block';
-  //   }
-  // }
 }

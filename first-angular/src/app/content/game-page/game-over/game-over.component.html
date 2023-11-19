@@ -3,17 +3,16 @@
     <div><strong>Статистика </strong></div>
   </div>
 
+  <!-- (click)="gameControlService.handleGameEnded()"
+  (click)="gameControlService.handleChangeContent(GamePhases.PREPARING)" -->
+
   <div class="closeButton">
-    <div class="cl-btn-6">
-      <div class="cl-btn-6-in">
-        <div
-          (click)="gameControlService.handleGameEnded()"
-          (click)="gameControlService.handleChangeContent(GamePhases.PREPARING)"
-          class="cl-btn-6-txt"
-        >
-          Main Menu
-        </div>
-      </div>
+    <div
+      class="close"
+      (click)="gameControlService.handleGameEnded()"
+      (click)="gameControlService.handleChangeContent(GamePhases.PREPARING)"
+    >
+      +
     </div>
   </div>
   <ul class="list">

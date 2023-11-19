@@ -34,12 +34,12 @@ export class DataFieldComponent {
     [0, 0, 0, 0, 0, 0, 0, 0],
   ];
   field1: number[][] = [
-    [0, 1, 1, 1, 1, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 0, 0, 0, 0],
+    [0, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
   ];
@@ -83,6 +83,7 @@ export class DataFieldComponent {
   }
 
   dropCard(row: number, cell: number) {
+    // this.field[row][cell] = this.currentCard;
     this.field = this.field1;
   }
 

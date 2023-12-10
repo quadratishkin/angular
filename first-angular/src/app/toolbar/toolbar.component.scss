@@ -36,8 +36,6 @@
 .containerTool {
   flex-grow: 5;
   display: flex;
-  margin-inline-start: 10px;
-  margin-inline-end: 10xp;
 }
 
 .menuBtn {
@@ -51,7 +49,7 @@
   font-size: 30px;
   border-radius: 55px;
   min-width: 60px;
-  min-height: 80px;
+  min-height: 100px;
   cursor: pointer;
   &:hover {
     color: #f40c0c;

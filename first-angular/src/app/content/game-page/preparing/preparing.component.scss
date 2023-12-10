@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   gap: 120px;
-  margin-top: 14%;
+  margin-top: calc(150px + 5%);
 }
 
 .playButtons {
@@ -48,6 +48,9 @@
   caret-color: transparent;
   &:hover {
     box-shadow: 0 0 0 12px #53ea93;
+  }
+  @media (max-width: 845px) {
+    width: 35%;
   }
 }
 

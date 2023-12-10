@@ -17,6 +17,9 @@
   width: 90%;
   left: 5%;
   top: 10%;
+  @media (max-width: 845px) {
+    top: 6%;
+  }
 }
 
 .nameOfGame {
@@ -27,6 +30,7 @@
   font-family: Syne Tactile;
   font-size: 45px;
   cursor: pointer;
+  line-height: 40px;
 }
 
 .containerTool {
@@ -52,37 +56,8 @@
   &:hover {
     color: #f40c0c;
   }
+  @media (max-width: 845px) {
+    min-height: 110px;
+    min-width: 70px;
+  }
 }
-
-// @media (max-width: 700px) {
-//   .nameOfGame {
-//     display: none;
-//   }
-// }
-
-// @media (max-width: 830px) {
-//   .accountNameText {
-//     display: none;
-//   }
-
-//   .accountPlace {
-//     max-width: 40px !important ;
-//   }
-
-//   .accountPicture {
-//     right: 0rem;
-//   }
-
-//   .accountName {
-//     right: 0rem;
-//     max-width: 40px;
-//     max-height: 40px;
-//     border-radius: 50%;
-//     border: 0px;
-//     background-color: rgb(77, 77, 245);
-
-//     &:active {
-//       border: 3px;
-//     }
-//   }
-// }

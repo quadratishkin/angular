@@ -1,9 +1,9 @@
-<mat-toolbar class="toolBarBackground">
+<div class="toolBarBackground">
   <span class="nameOfGame">Battle For Weakness</span>
-  <div class="containerTool mx-auto">
+  <div class="containerTool">
     <button
       (click)="pageContentService.handleChangeContent(Pages.MAIN_PAGE)"
-      class="btn menuBtn"
+      class="menuBtn"
     >
       Main Page
     </button>
@@ -14,30 +14,22 @@
       Game
     </button>
     <button
-      (click)="pageContentService.handleChangeContent(Pages.THIRD_PAGE)"
+      (click)="pageContentService.handleChangeContent(Pages.RULES_PAGE)"
       class="menuBtn"
     >
-      Third
+      Rules
     </button>
-
     <button
       (click)="pageContentService.handleChangeContent(Pages.DEVELOPERS_PAGE)"
       class="menuBtn"
     >
       Developers
     </button>
-  </div>
-  <div class="accountPlace">
     <button
       (click)="pageContentService.handleChangeContent(Pages.AUTHORIZATION_PAGE)"
-      class="accountName"
+      class="menuBtn"
     >
-      <img
-        class="accountPicture"
-        src="../assets/Photoes/profilePhoto.jpg"
-        alt="YourPicture"
-      />
-      <span class="accountNameText">AccountName</span>
+      <span class="accountText">Account</span>
     </button>
   </div>
-</mat-toolbar>
+</div>

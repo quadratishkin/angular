@@ -14,7 +14,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
 import { FirstPageComponent } from './content/first-page/first-page.component';
 import { GamePageComponent } from './content/game-page/game-page.component';
-import { ThirdPageComponent } from './content/third-page/third-page.component';
+import { RulesPageComponent } from './content/rules-page/rules-page.component';
 import { DevelopersPageComponent } from './content/developers-page/developers-page.component';
 import { DataFieldComponent } from './content/game-page/data-field/data-field.component';
 import { PreparingComponent } from './content/game-page/preparing/preparing.component';
@@ -33,7 +33,7 @@ import { ModalComponent } from './content/game-page/data-field/modal/modal.compo
     ContentComponent,
     FirstPageComponent,
     GamePageComponent,
-    ThirdPageComponent,
+    RulesPageComponent,
     DevelopersPageComponent,
     DataFieldComponent,
     PreparingComponent,

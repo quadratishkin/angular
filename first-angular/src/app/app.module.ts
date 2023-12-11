@@ -25,6 +25,8 @@ import { AccountSettingsComponent } from './content/authorization-page/account-s
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from './content/game-page/data-field/modal/modal.component';
+import { SigninComponent } from './content/authorization-page/account-creating/signin/signin.component';
+import { SignupComponent } from './content/authorization-page/account-creating/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { ModalComponent } from './content/game-page/data-field/modal/modal.compo
     AccountCreatingComponent,
     AccountSettingsComponent,
     ModalComponent,
+    SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

@@ -34,8 +34,9 @@
 }
 
 .containerTool {
-  flex-grow: 5;
+  flex-grow: 8;
   display: flex;
+  gap: 10px;
 }
 
 .menuBtn {
@@ -43,10 +44,12 @@
   flex-basis: 0;
   flex-grow: 1;
   color: white;
+  font-family: Syne Tactile;
   background-image: url("../../assets/Photoes/toolbarMenuButton.jpg");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0);
   font-size: 30px;
+  border: 5px solid black;
   border-radius: 55px;
   min-width: 60px;
   min-height: 100px;
